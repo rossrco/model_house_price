@@ -8,7 +8,7 @@ Unfortunately, we cannot invest the same amount of time, but we need to achieve 
 
 > To develop a model that has less than 50 000 USD error on a 65 $m^2$ apartment.
 
-## Exploratory Visualization
+## Exploratory Visualization And Analysis
 ### Dashboard
 We set up a dashboard in Google Data Studio with some of the data we collect in *Curious Bot Homes*. This allows us to:
 
@@ -22,3 +22,15 @@ We set up a dashboard in Google Data Studio with some of the data we collect in 
 
 ![Real Estate Dashboard](https://github.com/rossrco/model_house_price/img/dashboard.png)
 
+### Geographical Visualization
+Understanding the property market also includes developing an intuition about the price in various parts of the target area. In the long run, this also allows us to understand our model's predictions and to be discerning about the validity of said predictions.
+
+To achieve that, we set up a Kepler GL visualization with the following layers:
+
+* The median price per hexagon
+* The mode of the real estate type per hexagon
+* The median real estate area per hexagon
+
+![Real Estate Geographical Visualization](https://github.com/rossrco/model_house_price/img/geo_visualization.png)
+
+### Exploratory Data Analysis
