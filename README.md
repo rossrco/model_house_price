@@ -34,3 +34,6 @@ To achieve that, we set up a Kepler GL visualization with the following layers:
 ![Real Estate Geographical Visualization](https://github.com/rossrco/model_house_price/img/geo_visualization.png)
 
 ### Exploratory Data Analysis
+To gain insights into the raw data and develop robust statistical models, we performed a quick [exploratory data analysis](https://github.com/rossrco/model_house_price/eda.ipynb). In it, we explore mainly the area and price distributions for normal values as well as outliers (i.e. price having `z-score >= 3`).
+
+![Price Per Property Type](https://github.com/rossrco/model_house_price/img/price_per_property_type.png)
