@@ -20,7 +20,7 @@ We set up a dashboard in Google Data Studio with some of the data we collect in 
     * How does the price trend develop over time?
     * How many ads per day / week / month appear in the target area?
 
-![Real Estate Dashboard](https://github.com/rossrco/model_house_price/blob/master/img/dashboard.png)
+![Real Estate Dashboard](img/dashboard.png)
 
 ### Geographical Visualization
 Understanding the property market also includes developing an intuition about the price in various parts of the target area. In the long run, this also allows us to understand our model's predictions and to be discerning about the validity of said predictions.
@@ -31,12 +31,12 @@ To achieve that, we set up a Kepler GL visualization with the following layers:
 * The mode of the real estate type per hexagon
 * The median real estate area per hexagon
 
-![Real Estate Geographical Visualization](https://github.com/rossrco/model_house_price/blob/master/img/geo_visualization.png)
+![Real Estate Geographical Visualization](img/geo_visualization.png)
 
 ### Exploratory Data Analysis
-To gain insights into the raw data and develop robust statistical models, we performed a quick [exploratory data analysis](https://github.com/rossrco/model_house_price/blob/master/eda.ipynb). In it, we explore mainly the area and price distributions for normal values as well as outliers (i.e. price having `z-score >= 3`).
+To gain insights into the raw data and develop robust statistical models, we performed a quick [exploratory data analysis](eda.ipynb). In it, we explore mainly the area and price distributions for normal values as well as outliers (i.e. price having `z-score >= 3`).
 
-![Price Per Property Type](https://github.com/rossrco/model_house_price/blob/master/img/price_per_property_type.png)
+![Price Per Property Type](img/price_per_property_type.png =800x)
 
 ## Benchmark
 Our selected benchmarks are:
@@ -68,7 +68,7 @@ The following transformations and feature engineering techniques are performed o
     * `post_code_1_hot` x `real_estate_type`
 
 ## Implementation
-The benchmarking, feature engineering and modelling are performed in the [model_prototypes.ipynb](https://github.com/rossrco/model_house_price/blob/master/model_prototypes.ipynb) notebook. The results, based on a sample of 1.1e4 records, are:
+The benchmarking, feature engineering and modelling are performed in the [model_prototypes.ipynb](model_prototypes.ipynb) notebook. The results, based on a sample of 1.1e4 records, are:
 
 | Model Name                             | explained_variance | mean abs error | mean percentage error | r2 score |
 |----------------------------------------|--------------------|----------------|-----------------------|----------|
@@ -88,7 +88,7 @@ Even though our initial experiment did not meet the mark as specified in the **P
     * We only ned raw data (the transformations are performed inside the model itself).
 * The residuals are reasonable and in line with expectations:
 
-![Residuals](https://github.com/rossrco/model_house_price/blob/master/img/error_scatter.png)
+![Residuals](img/error_scatter.png)
 
 ## Reflection
 We built a web app in order to automate the process of data collection. We stored the data in BigQuery and created several procedures for data cleaning. We built a dashboard to help us gain an intuition about the real estate market as well as to sense check our model results. We performed an exploratory data analysis and identified the major trends in the data. We performed feature engineering and trained 4 models. We evaluated them against the benchmark and our problem definition.
