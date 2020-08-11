@@ -48,3 +48,12 @@ Our selected benchmarks are:
 | [Benchmark] Median Price               | 0%                 | 16586          | 27%                   | -0%      |
 | [Benchmark] Median Price Per Post Code | 27%                | 13584          | 22%                   | 26%      |
 
+## Algorithms And Techniques
+We will experiment with the following algorithms:
+* Linear Models:
+    * Linear Regression
+    * Gradient Boosting Regressor
+* Deep Learning:
+    * 3 Hidden Layer Neural Network
+    * Wide And Deep Regressor
+
