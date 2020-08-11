@@ -66,3 +66,16 @@ The following transformations and feature engineering techniques are performed o
     * `real_estate_type` x `area_bucketized`
     * `post_code_1_hot` x `area_bucketized`
     * `post_code_1_hot` x `real_estate_type`
+
+## Implementation
+The benchmarking, feature engineering and modelling are performed in the [model_prototypes.ipynb](https://github.com/rossrco/model_house_price/model_prototypes.ipynb) notebook. The results, based on a sample of 1.1e4 records, are:
+
+| Model Name                             | explained_variance | mean abs error | mean percentage error | r2 score |
+|----------------------------------------|--------------------|----------------|-----------------------|----------|
+| [Benchmark] Median Price               | 0%                 | 16586          | 27%                   | -0%      |
+| [Benchmark] Median Price Per Post Code | 27%                | 13584          | 22%                   | 26%      |
+| Linear Model                           | 60%                | 9983           | 14%                   | 60%      |
+| Deep Neural Network                    | 63%                | 9076           | 13%                   | 63%      |
+| Wide And Deep Model                    | 69%                | 7980           | 11%                   | 69%      |
+
+Our best model has an error of 51 870 USD for a 65 $m^2$ apartment.
