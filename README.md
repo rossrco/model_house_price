@@ -37,3 +37,14 @@ To achieve that, we set up a Kepler GL visualization with the following layers:
 To gain insights into the raw data and develop robust statistical models, we performed a quick [exploratory data analysis](https://github.com/rossrco/model_house_price/eda.ipynb). In it, we explore mainly the area and price distributions for normal values as well as outliers (i.e. price having `z-score >= 3`).
 
 ![Price Per Property Type](https://github.com/rossrco/model_house_price/img/price_per_property_type.png)
+
+## Benchmark
+Our selected benchmarks are:
+* The median price of all properties in the train dataset
+* The median price per post code for all post codes in the train dataset
+
+| Model Name                             | explained_variance | mean abs error | mean percentage error | r2 score |
+|----------------------------------------|--------------------|----------------|-----------------------|----------|
+| [Benchmark] Median Price               | 0%                 | 16586          | 27%                   | -0%      |
+| [Benchmark] Median Price Per Post Code | 27%                | 13584          | 22%                   | 26%      |
+
