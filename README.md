@@ -36,7 +36,7 @@ To achieve that, we set up a Kepler GL visualization with the following layers:
 ### Exploratory Data Analysis
 To gain insights into the raw data and develop robust statistical models, we performed a quick [exploratory data analysis](eda.ipynb). In it, we explore mainly the area and price distributions for normal values as well as outliers (i.e. price having `z-score >= 3`).
 
-![Price Per Property Type](img/price_per_property_type.png =800x)
+![Price Per Property Type](img/price_per_property_type.png)
 
 ## Benchmark
 Our selected benchmarks are:
