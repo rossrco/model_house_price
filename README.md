@@ -52,8 +52,17 @@ Our selected benchmarks are:
 We will experiment with the following algorithms:
 * Linear Models:
     * Linear Regression
-    * Gradient Boosting Regressor
+    * Gradient Boosting Regression
 * Deep Learning:
-    * 3 Hidden Layer Neural Network
-    * Wide And Deep Regressor
+    * Deep Neural Network
+    * Wide And Deep Model
 
+## Data Preprocessing
+The following transformations and feature engineering techniques are performed on the dataset:
+* The `area` is bucketized into bins of 30 $m^2$
+* The `type` is one-hot encoded
+* The `post_code` is one-hot encoded
+* Crossed columns:
+    * `real_estate_type` x `area_bucketized`
+    * `post_code_1_hot` x `area_bucketized`
+    * `post_code_1_hot` x `real_estate_type`
