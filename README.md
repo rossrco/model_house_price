@@ -79,3 +79,24 @@ The benchmarking, feature engineering and modelling are performed in the [model_
 | Wide And Deep Model                    | 69%                | 7980           | 11%                   | 69%      |
 
 Our best model has an error of 51 870 USD for a 65 $m^2$ apartment.
+
+## Justification
+Even though our initial experiment did not meet the mark as specified in the **Problem Definition**, there are a few positive points worth mentioning:
+* The model's error is reasonably close to the benchmark. Therefore, the model can be used in production as an initial version.
+* All data transformations and all engineered features are specified in the feature layer of the model. This gives us the benefits that:
+    * The code is portable
+    * We only ned raw data (the transformations are performed inside the model itself).
+* The residuals are reasonable and in line with expectations:
+
+![Residuals](https://github.com/rossrco/model_house_price/img/error_scatter.png)
+
+## Reflection
+We built a web app in order to automate the process of data collection. We stored the data in BigQuery and created several procedures for data cleaning. We built a dashboard to help us gain an intuition about the real estate market as well as to sense check our model results. We performed an exploratory data analysis and identified the major trends in the data. We performed feature engineering and trained 4 models. We evaluated them against the benchmark and our problem definition.
+
+Finally, we selected a model that is:
+* Close to the specifications of this task
+* Easy to implement
+* Takes raw data
+
+## Improvement
+We still have not fully utilized the text description of the properties. In the next iteration of this exercise, we plan on utilizing natural language processing over this feature. This will allow us to concatenating the resulting model with the existing wide and deep model.
